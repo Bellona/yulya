@@ -1,1 +1,1 @@
-web: gunicorn restoration.wsgi
+web: python manage.py runserver
