@@ -8,4 +8,14 @@
 <br>
 <h4>Новые работы</h4>
 
+{% for item in pictures%}
+	{% if item.direction = 'v' %}
+		<img src="{{ item.picture.url }}" width="420">
+	{% endif %}
+	{% if item.direction = 'h' %}
+		<img src="{{ item.picture.url }}" width="630">
+	{% endif %}	
+{% endfor %}
+
+
 {% endblock %}

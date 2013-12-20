@@ -44,6 +44,10 @@ body{
     float:right;
     clear:right;
 }
+
+#content {
+    text-align: center;
+}
 #content h4{
     color:#9A9A8F;
 }

@@ -1,3 +1,4 @@
 from django.contrib import admin
+from yulya.models import Painting
 
-# Register your models here.
+admin.site.register(Painting)

@@ -1,11 +1,13 @@
 from django.db import models
+from django.conf import settings
 
-# Create your models here.
+
 class Painting(models.Model):
 	name = models.CharField(max_length = 100)
-	path_to_picture = models.CharField(max_length = 100)
+	picture = models.ImageField(upload_to=".")
 	category = models.CharField(max_length = 100)
-	created_date = models.DateField()
+	created_date = models.DateTimeField()
+	direction = models.CharField(max_length = 1)
 
 	def __unicode__(self):
 		return self.name

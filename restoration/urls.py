@@ -14,4 +14,7 @@ urlpatterns = patterns('',
 	url(r'^contacts/', 'yulya.views.contacts', name='contacts'),
 
 	url(r'^admin/', include(admin.site.urls)),
-) + static('/static/', document_root=settings.STATIC_ROOT)
+)
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
