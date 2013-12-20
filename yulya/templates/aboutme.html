@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+<h4>Обо мне</h4>
+<p>Биленко Юлия Владимировна, 1987 года рождения.</p>
+<p>Получила шестилетнее художественное образование по специальности художник-реставратор.</p>
+<br>
+<p>
+	<img src="{% static "aboutme/me2.jpg" %}" alt = "" width="320" height="480">
+	<img src="{% static "aboutme/me1.jpg" %}" alt = "" width="320" height="480">
+	<img src="{% static "aboutme/me3.jpg" %}" alt = "" onclick="changeSizeImage(this)">
+</p>
+
+{% endblock %}
