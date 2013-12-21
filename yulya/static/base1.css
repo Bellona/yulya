@@ -32,9 +32,6 @@ body{
 	margin: 0px 10px 10px 10px;
 	z-index: 100;
 }
-#nav ul:after {
-		content: ""; clear: both; display: block;
-	}
 #nav ul li {
 	float: left;
 }
@@ -55,6 +52,7 @@ body{
 	background: #5f6975; border-radius: 0px; padding: 0;
 	position: absolute; top: 100%;
 	display: none;
+	margin: auto;
 }
 #nav ul ul li {
 		float: none; 
