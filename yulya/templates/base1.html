@@ -1,0 +1,42 @@
+{% load staticfiles %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Реставрация картин, копии картин на заказ</title>
+		<link rel="stylesheet" type="text/css" href="{% static "base1.css" %}">
+	</head>
+	<body>
+		<div id = "wrapper">
+			<div id = "header">
+				<img src="{% static "restoration21.jpg" %}" alt="" height="80">
+			</div>
+			<div id ="menu">
+				<div id="nav">
+					<ul>
+						<li><a href="/">Главная</a></li>
+						<li><a href="#">Реставрации</a>
+							<ul>
+								<li><a href="/restorations_icons">Икон</a></li>
+								<li><a href="/restorations_paintings">Картин</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Копии</a>
+							<ul>
+								<li><a href="/copies_landscapes">Пейзажи</a></li>
+								<li><a href="/copies_stilllife">Натюрморты</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Блог</a></li>
+						<li><a href="/aboutme">Обо мне</a></li>
+						<li><a href="/contacts">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id = "main">
+				<div id = "content">{% block content %}{% endblock %}</div>
+			</div>
+			<div id = "footer">	&#169; Авторские права на дизайн и всю информацию сайта принадлежат Юлии Биленко. Использование материалов данного сайта возможно только с письменного разрешения автора.</div>			
+		</div>
+	</body>
+</html>	

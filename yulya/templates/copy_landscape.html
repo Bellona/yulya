@@ -1,0 +1,24 @@
+{% extends "base1.html" %}
+
+{% block content %}
+
+<div class="info">
+	<h4>Копии пейзажей</h4>
+	<br>
+	{% for item in copies%}
+	<p>
+		<p><b>Автор картины:</b> {{item.author}}</p>
+		<p><b>Название картины:</b> {{item.name}}</p>	
+		<p><b>Описание:</b> {{item.description}}</p>
+		{% if item.direction == 'v' %}
+			<img src="{{ item.picture.url }}" width="420">
+		{% endif %}
+		{% if item.direction == 'h' %}
+			<img src="{{ item.picture.url }}" width="630">
+		{% endif %}	
+	</p>
+	<br>
+{% endfor %}
+</div>	
+
+{% endblock %}

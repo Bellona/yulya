@@ -1,0 +1,15 @@
+{% extends "base1.html" %}
+
+{% block content %}
+
+{% load staticfiles %} 
+<div id = "main_content">
+	<div id="mainpicture_holder">
+		<img src="{% static "home.jpg" %}" alt = "" width="1000" height="600">
+		<div id = "main_text">
+			<h6>Юлия Биленко</h6>
+			<span>Реставрация картин, копии картин на заказ</span>
+		</div>	
+	</div>
+</div>
+{% endblock %} 

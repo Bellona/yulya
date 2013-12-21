@@ -1,4 +1,6 @@
 from django.contrib import admin
-from yulya.models import Painting
+from yulya.models import Copy
+from yulya.models import Restoration
 
-admin.site.register(Painting)
+admin.site.register(Copy)
+admin.site.register(Restoration)

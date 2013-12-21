@@ -1,0 +1,46 @@
+{% extends "base1.html" %}
+
+{% block content %}
+
+<div class="info">
+	<h4>Реставрация картин</h4>
+	<br>
+	{% for item in restorations%}
+	<p>
+		<p><b>Автор картины:</b> {{item.author}}</p>
+		<p><b>Название картины:</b> {{item.name}}</p>	
+		<p><b>Описание:</b> {{item.description}}</p>
+		{% if item.direction == 'v' %}
+			<table id="table">
+				<tbody>
+					<tr>
+						<th>До</th>
+						<th>После</th>
+					</tr>
+					<tr>
+						<td><img src="{{ item.picture_before.url }}" width="400"></td>
+						<td><img src="{{ item.picture_after.url }}" width="400"></td>
+					</tr>
+				</tbody>
+			</table>
+		{% endif %}
+		{% if item.direction == 'h' %}
+			<table id="table">
+				<tbody>
+					<tr>
+						<th>До</th>
+						<th>После</th>
+					</tr>
+					<tr>
+						<td><img src="{{ item.picture_before.url }}" width="420"></td>
+						<td><img src="{{ item.picture_after.url }}" width="420"></td>
+					</tr>
+				</tbody>
+			</table>
+		{% endif %}	
+	</p>
+	<br>
+{% endfor %}
+</div>	
+
+{% endblock %}
