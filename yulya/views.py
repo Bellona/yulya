@@ -1,6 +1,7 @@
 from django.shortcuts import render_to_response
 from yulya.models import Copy
 from yulya.models import Restoration
+from yulya.models import Blog
 
 def home(request):
 	#pictures = Painting.objects.all().order_by('-created_date')[:10]
@@ -28,3 +29,7 @@ def restorations_icons(request):
 def restorations_paintings(request):
 	restorations = Restoration.objects.filter(category = 'painting')
 	return render_to_response('restoration_painting.html', {'restorations': restorations})	
+
+def blogs(request):
+	blogs = Blog.objects.all().order_by('-create')
+	return render_to_response('blog.html', {'blogs': blogs})

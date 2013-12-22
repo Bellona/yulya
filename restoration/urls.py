@@ -16,8 +16,10 @@ urlpatterns = patterns('',
 	url(r'^copies_stilllife/', 'yulya.views.copies_stilllife', name='copies_stilllife'),
 	url(r'^restorations_icons/', 'yulya.views.restorations_icons', name='restorations_icons'),
 	url(r'^restorations_paintings/', 'yulya.views.restorations_paintings', name='restorations_paintings'),
+	url(r'^blog/', 'yulya.views.blogs', name='blogs'),	
 
 	url(r'^admin/', include(admin.site.urls)),
+	(r'^ckeditor/', include('hacks.ckeditor_urls')),
 )
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
