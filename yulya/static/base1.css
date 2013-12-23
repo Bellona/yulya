@@ -109,3 +109,25 @@ body{
 #table{
 	margin: auto;
 }
+#blog{
+	margin: 30px;
+	color: #3B3B3B;
+}
+#blog_title{
+	font-size: 16px;
+}
+#blog_date{
+	font-size: 12px;
+}
+#blog_carrier{
+	border-style: solid;
+	border-color: #BAB9B9;
+	height: 200px;
+	overflow: hidden;
+}
+#blog_content{
+	margin: 20px;
+}
+#blog_content p{
+	text-align: justify;
+}

@@ -1,6 +1,5 @@
 from django.db import models
 from django.conf import settings
-from taggit.managers import TaggableManager
 from ckeditor.fields import RichTextField
 
 DIRECTION_CHOICES = (
@@ -47,7 +46,6 @@ class Blog(models.Model):
 	title = models.CharField(max_length = 100)
 	body = RichTextField()
 	create = models.DateTimeField()
-	tags = TaggableManager()
 
 	def __unicode__(self):
 		return self.title	

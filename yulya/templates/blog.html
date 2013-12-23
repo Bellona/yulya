@@ -4,10 +4,16 @@
 
 {% for item in blogs %}
 
-<p>Эта страница не готова</p>
-<p>{{item.title}}</p>
-<p>{% autoescape off %}{{item.body}}{% endautoescape %}</p>
+<div id="blog">
+	<h4 id="blog_title"><a href="#">{{item.title}}</a></h4>
+	<p id="blog_date">on {{item.create}}</p>
+	<div id='blog_carrier'>
+		<div id="blog_content">
+			<p>{% autoescape off %}{{item.body}}{% endautoescape %}</p>
+		</div>
+	</div>
+</div>
 
 {% endfor %}
 
-{% endblock %}
+{% endblock %}	
