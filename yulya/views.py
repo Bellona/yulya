@@ -1,7 +1,7 @@
 from django.shortcuts import render_to_response
-from yulya.models import Copy
-from yulya.models import Restoration
-from yulya.models import Blog
+from yulya.models import Copy, Restoration, Blog
+from yulya.forms import CommentForm
+
 
 def home(request):
 	#pictures = Painting.objects.all().order_by('-created_date')[:10]
@@ -34,6 +34,8 @@ def blogs(request):
 	blogs = Blog.objects.all().order_by('-create')
 	return render_to_response('blog.html', {'blogs': blogs})
 
+
 def post(request, pk):
 	post = Blog.objects.get(id=int(pk))
-	return render_to_response('post.html', {'post': post})
+	form = CommentForm()
+	return render_to_response('post.html', {'post': post, 'form': form})

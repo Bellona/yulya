@@ -86,3 +86,39 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'yulya', 'static')
 
 CKEDITOR_UPLOAD_PATH = os.path.join(MEDIA_ROOT, 'uploads')
+
+
+CKEDITOR_CONFIGS = {
+           'awesome_ckeditor': {
+               'toolbar': 'Basic',
+               'height': 100,
+               'width': 500,
+           },
+            'default': {
+               'toolbar': 'Full',
+               'height': 300,
+               'width': 900,
+           },
+           'mine': {
+        'toolbar': [
+            [      'Undo', 'Redo',
+              '-', 'Bold', 'Italic', 'Underline',
+              '-', 'Link', 'Unlink', 'Anchor',
+              '-', 'Format',
+              '-', 'SpellChecker', 'Scayt',
+              '-', 'Maximize',
+            ],
+            [      'HorizontalRule',
+              '-', 'Table',
+              '-', 'BulletedList', 'NumberedList',
+              '-', 'Cut','Copy','Paste','PasteText','PasteFromWord',
+              '-', 'SpecialChar',
+              '-', 'Source',
+              '-', 'About',
+            ]
+        ],
+        'width': 840,
+        'height': 300,
+        'toolbarCanCollapse': False,
+    }
+       }
