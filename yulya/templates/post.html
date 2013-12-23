@@ -1,0 +1,14 @@
+{% extends "base1.html" %}
+
+{% block content %}
+<div id="blog">
+	<h4 id="blog_title"><a href="/blog/{{post.pk}}">{{post.title}}</a></h4>
+	<p id="blog_date">on {{post.create}}</p>
+	<div id='post_carrier'>
+		<div id="blog_content">
+			<p>{% autoescape off %}{{post.body}}{% endautoescape %}</p>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

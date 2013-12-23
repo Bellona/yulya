@@ -5,7 +5,7 @@
 {% for item in blogs %}
 
 <div id="blog">
-	<h4 id="blog_title"><a href="#">{{item.title}}</a></h4>
+	<h4 id="blog_title"><a href="/blog/{{item.pk}}">{{item.title}}</a></h4>
 	<p id="blog_date">on {{item.create}}</p>
 	<div id='blog_carrier'>
 		<div id="blog_content">

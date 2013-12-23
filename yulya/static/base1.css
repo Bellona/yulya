@@ -119,9 +119,11 @@ body{
 #blog_date{
 	font-size: 12px;
 }
-#blog_carrier{
+#blog_carrier, #post_carrier{
 	border-style: solid;
 	border-color: #BAB9B9;
+}
+#blog_carrier{
 	height: 200px;
 	overflow: hidden;
 }
