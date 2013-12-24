@@ -49,3 +49,12 @@ class Blog(models.Model):
 
 	def __unicode__(self):
 		return self.title	
+
+class Comment(models.Model):
+	author = models.CharField(max_length=100)
+	body = RichTextField()
+	created = models.DateTimeField()
+	Article = models.ForeignKey(Blog)
+
+	def __unicode__(self):
+		return self.Article.title

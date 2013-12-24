@@ -101,24 +101,12 @@ CKEDITOR_CONFIGS = {
            },
            'mine': {
         'toolbar': [
-            [      'Undo', 'Redo',
-              '-', 'Bold', 'Italic', 'Underline',
-              '-', 'Link', 'Unlink', 'Anchor',
+            [      'Bold', 'Italic', 'Underline',
               '-', 'Format',
-              '-', 'SpellChecker', 'Scayt',
-              '-', 'Maximize',
+              '-', 'Smiley', 'SpecialChar',
             ],
-            [      'HorizontalRule',
-              '-', 'Table',
-              '-', 'BulletedList', 'NumberedList',
-              '-', 'Cut','Copy','Paste','PasteText','PasteFromWord',
-              '-', 'SpecialChar',
-              '-', 'Source',
-              '-', 'About',
-            ]
         ],
-        'width': 840,
-        'height': 300,
-        'toolbarCanCollapse': False,
+        'width': 500,
+        'height':180,
     }
        }

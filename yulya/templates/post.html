@@ -12,8 +12,31 @@
 	</div>
 <h4>Комментарии</h4>
 
+{% for item in comment %}
+
+	<p>
+		<span>{{item.author}}</span>
+		<span>{{item.created}}</span>
+	</p>
+	<div id='post_carrier'>
+		<div id="blog_content">
+			<p>{% autoescape off %}{{item.body}}{% endautoescape %}</p>
+		</div>
+	</div>	
+
+{% endfor %}
+
+<form method="post">
+{% csrf_token %}
+<h4>Ваш комментарий</h4>
+<p>
+	<span>Ваше имя</span>
+	{{form.author}}
+</p>
 {{form.media}}
 {{form.comment}}
+<input type = "submit" value="Добавить" name = "Add"></input>
+</form>
 </div>
 
 {% endblock %}

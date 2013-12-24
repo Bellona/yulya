@@ -1,6 +1,8 @@
 from django.shortcuts import render_to_response
-from yulya.models import Copy, Restoration, Blog
+from django.template import RequestContext
+from yulya.models import Copy, Restoration, Blog, Comment
 from yulya.forms import CommentForm
+import datetime
 
 
 def home(request):
@@ -37,5 +39,18 @@ def blogs(request):
 
 def post(request, pk):
 	post = Blog.objects.get(id=int(pk))
-	form = CommentForm()
-	return render_to_response('post.html', {'post': post, 'form': form})
+	form = CommentForm(request.POST)
+	if request.method == 'POST' and form.is_valid():
+		new_comment = Comment(
+			author=form.cleaned_data['author'],
+			body=form.cleaned_data['comment'],
+			created=datetime.datetime.now(),
+			Article_id=int(pk))
+		new_comment.save()
+		form = CommentForm()
+
+	comment = Comment.objects.filter(Article=int(pk))
+	return render_to_response(
+		'post.html', 
+		{'post': post, 'comment': comment, 'form': form},
+		context_instance=RequestContext(request))
