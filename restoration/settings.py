@@ -68,7 +68,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-RU'
 
 TIME_ZONE = 'UTC'
 
@@ -102,11 +102,12 @@ CKEDITOR_CONFIGS = {
            'mine': {
         'toolbar': [
             [      'Bold', 'Italic', 'Underline',
-              '-', 'Format',
               '-', 'Smiley', 'SpecialChar',
             ],
         ],
         'width': 500,
         'height':180,
+        'resize_enabled': False,
+        'removePlugins': 'elementspath',
     }
        }

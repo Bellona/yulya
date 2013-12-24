@@ -108,6 +108,7 @@ body{
 }
 #table{
 	margin: auto;
+	border-spacing: 30px;
 }
 #blog{
 	margin: 30px;
@@ -132,4 +133,8 @@ body{
 }
 #blog_content p{
 	text-align: justify;
+}
+#comment_date{
+	font-size: 12px;
+    margin-left:25px;
 }
