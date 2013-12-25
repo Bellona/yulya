@@ -49,7 +49,7 @@ def post(request, pk):
 		new_comment.save()
 		form = CommentForm()
 
-	comment = Comment.objects.filter(Article=int(pk))
+	comment = Comment.objects.filter(Article=int(pk)).order_by('created')
 	return render_to_response(
 		'post.html', 
 		{'post': post, 'comment': comment, 'form': form},

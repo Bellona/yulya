@@ -108,7 +108,7 @@ body{
 }
 #table{
 	margin: auto;
-	border-spacing: 30px;
+	border-spacing: 30px 5px;
 }
 #blog{
 	margin: 30px;

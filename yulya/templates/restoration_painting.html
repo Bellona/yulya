@@ -2,6 +2,8 @@
 
 {% block content %}
 
+{% load staticfiles %}
+
 <div class="info">
 	<h4>Реставрация картин</h4>
 	<br>
@@ -10,34 +12,66 @@
 		<p><b>Автор картины:</b> {{item.author}}</p>
 		<p><b>Название картины:</b> {{item.name}}</p>	
 		<p><b>Описание:</b> {{item.description}}</p>
-		{% if item.direction == 'v' %}
-			<table id="table">
-				<tbody>
+		<table id="table">
+			<tbody>
+				<tr>
+					<th>До</th>
+					<th>После</th>
+				</tr>
+				{% if item.direction == 'v' %}
 					<tr>
-						<th>До</th>
-						<th>После</th>
+						<td>
+							<a class="fancybox_v" href="{{ item.picture_before.url }}">
+								<img src="{{ item.picture_before.url }}" width="400">
+							</a>
+						</td>
+						<td>
+							<a class="fancybox_v" href="{{ item.picture_after.url }}">
+								<img src="{{ item.picture_after.url }}" width="400">
+							</a>
+						</td>
 					</tr>
 					<tr>
-						<td><img src="{{ item.picture_before.url }}" width="400"></td>
-						<td><img src="{{ item.picture_after.url }}" width="400"></td>
+						<td>
+							<a class="fancybox_v" href="{{ item.picture_before.url }}">
+								<img src="{% static "search-icon.png" %}" width="50">
+							</a>
+						</td>
+						<td>
+							<a class="fancybox_v" href="{{ item.picture_after.url }}">
+								<img src="{% static "search-icon.png" %}" width="50">
+							</a>
+						</td>
 					</tr>
-				</tbody>
-			</table>
-		{% endif %}
-		{% if item.direction == 'h' %}
-			<table id="table">
-				<tbody>
+				{% endif %}		
+				{% if item.direction == 'h' %}
+					<tr>				
+						<td>
+							<a class="fancybox_h" href="{{ item.picture_before.url }}">
+								<img src="{{ item.picture_before.url }}" width="450">
+							</a>
+						</td>
+						<td>
+							<a class="fancybox_h" href="{{ item.picture_after.url }}">
+								<img src="{{ item.picture_after.url }}" width="450">
+							</a>
+						</td>
+					</tr>
 					<tr>
-						<th>До</th>
-						<th>После</th>
+						<td>
+							<a class="fancybox_h" href="{{ item.picture_before.url }}">
+								<img src="{% static "search-icon.png" %}" width="50">
+							</a>
+						</td>
+						<td>
+							<a class="fancybox_h" href="{{ item.picture_after.url }}">
+								<img src="{% static "search-icon.png" %}" width="50">
+							</a>
+						</td>
 					</tr>
-					<tr>
-						<td><img src="{{ item.picture_before.url }}" width="450"></td>
-						<td><img src="{{ item.picture_after.url }}" width="450"></td>
-					</tr>
-				</tbody>
-			</table>
-		{% endif %}	
+				{% endif %}
+			</tbody>
+		</table>
 	</p>
 	<br>
 {% endfor %}

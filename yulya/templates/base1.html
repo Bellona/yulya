@@ -5,6 +5,9 @@
 	<head>
 		<title>Реставрация картин, копии картин на заказ</title>
 		<link rel="stylesheet" type="text/css" href="{% static "base1.css" %}">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<link rel="stylesheet" href="{% static "fancybox/source/jquery.fancybox.css" %}" type="text/css" media="screen" />
+		<script type="text/javascript" src="{% static "fancybox/source/jquery.fancybox.pack.js" %}"></script>
 	</head>
 	<body>
 		<div id = "wrapper">
@@ -40,3 +43,39 @@
 		</div>
 	</body>
 </html>	
+<script type="text/javascript">
+	$(document).ready(function() {
+	    $(".fancybox_h").fancybox({
+	    	openEffect	: 'elastic',
+	    	closeEffect	: 'elastic',
+
+	    	helpers : {
+	    		title : {
+	    			type : 'inside'
+	    		}
+	    	},
+
+	    	padding : 5,
+	    	minWidth : 800
+	    	
+	    });
+	});
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	    $(".fancybox_v").fancybox({
+	    	openEffect	: 'elastic',
+	    	closeEffect	: 'elastic',
+
+	    	helpers : {
+	    		title : {
+	    			type : 'inside'
+	    		}
+	    	},
+
+	    	padding : 5,
+	    	minWidth : 600
+	    	
+	    });
+	});
+</script>
