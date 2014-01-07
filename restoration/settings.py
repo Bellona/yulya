@@ -21,7 +21,7 @@ MEDIA_URL = '/media/'
 SECRET_KEY = 'r0hah0#30*=&e0u9*=e6=5a22h)(*hyxw@#cqwqff%o_0_%!7='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 TEMPLATE_DEBUG = True
 
@@ -64,9 +64,8 @@ DATABASES = {
     }
 }
 
-if not DEBUG:
-    import dj_database_url
-    DATABASES['default'] =  dj_database_url.config()
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config()
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
