@@ -21,7 +21,7 @@ MEDIA_URL = '/media/'
 SECRET_KEY = 'r0hah0#30*=&e0u9*=e6=5a22h)(*hyxw@#cqwqff%o_0_%!7='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
