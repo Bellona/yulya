@@ -57,14 +57,12 @@ WSGI_APPLICATION = 'restoration.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
-DATABASES = {}
-
-import dj_database_url
-DATABASES['default'] = dj_database_url.config()
-
-# Internationalization
-# https://docs.djangoproject.com/en/1.6/topics/i18n/
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
+    }
+}
 LANGUAGE_CODE = 'ru-RU'
 
 TIME_ZONE = 'UTC'
