@@ -138,3 +138,21 @@ body{
 	font-size: 12px;
     margin-left:25px;
 }
+#right_side{
+	float: right;
+	width: 10%;
+	text-align: center;
+}
+#left_side{
+	float: left;
+	width: 10%;
+	text-align: center;
+}
+#main{
+	clear: both;
+	width: 100%;
+}
+#content{
+	margin:0 auto;
+	width: 80%;
+}

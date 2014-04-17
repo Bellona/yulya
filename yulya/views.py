@@ -8,7 +8,7 @@ import datetime
 def home(request):
 	#pictures = Painting.objects.all().order_by('-created_date')[:10]
 	# import pdb;pdb.set_trace()
-	return render_to_response('main1.html')
+	return render_to_response('main2.html')
 
 def aboutme(request):
 	return render_to_response('aboutme.html')
