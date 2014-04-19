@@ -9,7 +9,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
 	
 	url(r'^$', 'yulya.views.home', name='home'),
-	url(r'^aboutme/', 'yulya.views.aboutme', name='aboutme'),
+	url(r'^aboutus/', 'yulya.views.aboutus', name='aboutus'),
 	url(r'^contacts/', 'yulya.views.contacts', name='contacts'),
 	url(r'^copies_landscapes/', 'yulya.views.copies_landscapes', name='copies_landscapes'),
 	url(r'^copies_stilllife/', 'yulya.views.copies_stilllife', name='copies_stilllife'),

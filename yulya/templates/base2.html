@@ -8,6 +8,8 @@
 		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<link rel="stylesheet" href="{% static "fancybox/source/jquery.fancybox.css" %}" type="text/css" media="screen" />
 		<script type="text/javascript" src="{% static "fancybox/source/jquery.fancybox.pack.js" %}"></script>
+		<link rel="stylesheet" href="{% static "jquery.magnifier.0.2/js/jquery.magnifier/css/jquery.magnifier.css" %}" type="text/css" media="screen" />
+		<script type="text/javascript" src="{% static "jquery.magnifier.0.2/js/jquery.magnifier/js/jquery.magnifier.0.2.js" %}"></script>
 	</head>
 	<body>
 		<div id = "wrapper">
@@ -58,7 +60,7 @@
 			</div>
 			<div id = "main">
 				<div id = "left_side">
-					<a href="#">
+					<a href="aboutus">
 						<img class="left" src="{% static "about_us.png" %}" alt = "" width="100" height="100">
 					</a>
 					<a href="#">
@@ -90,8 +92,14 @@
 					<a href="#">
 						<img src="{% static "stickers.jpg" %}" alt ="" width="100" height="100">
 					</a>
+					<a href="#">
+						<img src="{% static "VK.png" %}" alt ="" width="80" height="80">
+					</a>
+					<a href="#">
+						<img src="{% static "facebook.png" %}" alt ="" width="80" height="80">
+					</a>
 				</div>
-				<div id = "content">{% block content %}{% endblock %}</div>
+				<div id = "content" style="background-image: url({% static "15.jpg" %})">{% block content %}{% endblock %}</div>
 			</div>
 			<div id = "footer">	&#169; Авторские права на дизайн и всю информацию сайта принадлежат Юлии Биленко. Использование материалов данного сайта возможно только с письменного разрешения автора.</div>			
 		</div>
@@ -133,3 +141,13 @@
 	    });
 	});
 </script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('a[rel*=magnify]').magnify(
+			{
+				lensWidth: 100, // width of the lens
+				lensHeight: 100, // height of the lens
+				link: false // clicking in the lens goes to the large image
+			});
+	});
+</script>	

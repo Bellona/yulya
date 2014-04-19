@@ -5,7 +5,9 @@
 {% load staticfiles %} 
 <div id = "main_content">
 	<div id="mainpicture_holder">
-		<img src="{% static "home1.jpg" %}" alt = "" width="1000" height="600">
+		<a href="{% static "home1.jpg" %}" rel="magnify">
+			<img src="{% static "home1.jpg" %}" alt="My small image" width="1000" height="600">
+		</a>
 	</div>
 </div>
 {% endblock %} 
